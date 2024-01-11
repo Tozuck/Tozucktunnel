@@ -9,5 +9,5 @@ This script automates the setup of IPv6 on Ubuntu.
 To use this script, run the following command:
 
 ```
-curl -s https://raw.githubusercontent.com/Tozuck/ipv6/main/tozuck.sh -o tozuck.sh
+curl -s https://raw.githubusercontent.com/Tozuck/ipv6/main/tozuck.sh -o tozuck.sh bash tozack.sh
 
