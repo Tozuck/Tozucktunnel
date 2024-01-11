@@ -128,13 +128,14 @@ function uninstall_and_delete_all_files() {
   exit 0
 }
 
-function multi_server() {
-  # Download multiserver.sh script
-  curl -s https://raw.githubusercontent.com/Tozuck/ipv6/main/scripts/multiserver.sh -o multiserver.sh
+function _server() {
+  # Download server.sh script
+  curl -s https://raw.githubusercontent.com/Tozuck/ipv6/main/scripts/server.sh -o server.sh
 
   # Check if the download was successful
   if [ $? -eq 0 ]; then
-    # Execute multiserver.sh
+    # Execute server.sh
+    sleep 2
     bash multiserver.sh
 
     # Clean up, remove the downloaded script
