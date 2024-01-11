@@ -136,12 +136,12 @@ function _server() {
   if [ $? -eq 0 ]; then
     # Execute server.sh
     sleep 2
-    bash multiserver.sh
+    bash server.sh  # Corrected the script name here
 
     # Clean up, remove the downloaded script
-    rm multiserver.sh
+    rm server.sh
   else
-    echo -e "${RED}Failed to download multiserver.sh.${RESET}"
+    echo -e "${RED}Failed to download server.sh.${RESET}"
   fi
 }
 
@@ -187,7 +187,7 @@ while true; do
 
   case $choice in
     1) ipv6_local_menu ;;
-    2) multi_server ;;
+    2) _server ;;  # Corrected the function name here
     3)
       # Sub-menu for System Settings
       while true; do
