@@ -129,21 +129,22 @@ function uninstall_and_delete_all_files() {
 }
 
 function _server() {
-  # Download server.sh script
-  curl -s https://raw.githubusercontent.com/Tozuck/ipv6/main/scripts/server.sh -o server.sh
+  # Download multiserver.sh script
+  curl -s https://raw.githubusercontent.com/Tozuck/ipv6/main/scripts/multiserver.sh -o multiserver.sh
 
   # Check if the download was successful
   if [ $? -eq 0 ]; then
-    # Execute server.sh
+    # Execute multiserver.sh
     sleep 2
-    bash server.sh  # Corrected the script name here
+    bash multiserver.sh
 
     # Clean up, remove the downloaded script
-    rm server.sh
+    rm multiserver.sh
   else
-    echo -e "${RED}Failed to download server.sh.${RESET}"
+    echo -e "${RED}Failed to download multiserver.sh.${RESET}"
   fi
 }
+
 
 # IPv6 Local menu
 function ipv6_local_menu() {
