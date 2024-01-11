@@ -170,7 +170,7 @@ while true; do
 
   case $choice in
     1) ipv6_local_menu ;;
-    2) bash multi_server.sh ;;
+    2) bash /scripts/multi_server.sh ;;
     3)
       # Sub-menu for System Settings
       while true; do
