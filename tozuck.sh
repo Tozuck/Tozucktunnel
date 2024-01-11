@@ -47,7 +47,7 @@ function set_ip6_local() {
 network:
   version: 2
   tunnels:
-    tunnel01:
+    solotunnel:
       mode: sit
       local: $iran_ipv4
       remote: $kharej_ipv4
@@ -61,7 +61,7 @@ EOL
 network:
   version: 2
   tunnels:
-    tunnel01:
+    solotunnel:
       mode: sit
       local: $kharej_ipv4
       remote: $iran_ipv4
@@ -194,4 +194,3 @@ while true; do
     *) echo -e "${YELLOW}Invalid choice. Please enter 1, 2, 3, or 0.${RESET}" ;;
   esac
 done
-
