@@ -128,6 +128,22 @@ function uninstall_and_delete_all_files() {
   exit 0
 }
 
+function multi_server() {
+  # Download multiserver.sh script
+  curl -s https://raw.githubusercontent.com/Tozuck/ipv6/main/scripts/multiserver.sh -o multiserver.sh
+
+  # Check if the download was successful
+  if [ $? -eq 0 ]; then
+    # Execute multiserver.sh
+    bash multiserver.sh
+
+    # Clean up, remove the downloaded script
+    rm multiserver.sh
+  else
+    echo -e "${RED}Failed to download multiserver.sh.${RESET}"
+  fi
+}
+
 # IPv6 Local menu
 function ipv6_local_menu() {
   clear
@@ -170,7 +186,7 @@ while true; do
 
   case $choice in
     1) ipv6_local_menu ;;
-    2) bash scripts/multiserver.sh ;;
+    2) multi_server ;;
     3)
       # Sub-menu for System Settings
       while true; do
