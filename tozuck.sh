@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -x
+
 NETPLAN_DIR="/etc/netplan"
 YAML_FILE="$NETPLAN_DIR/tozucksolotunnel.yaml"  # Updated YAML file name
 
