@@ -108,6 +108,7 @@ EOF
             ;;
         0)
             echo "Exiting..."
+            cd
             exit 0
             ;;
         *)
